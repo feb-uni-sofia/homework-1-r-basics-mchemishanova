@@ -19,9 +19,14 @@ averagexmax
 xmin[xmin < mean(xmin)]
 
 # e)
+## Not relevant
 xmin[xmin > mean(xmin)]
 
+## Correct
+xmin[xmax > mean(xmax)]
+
 # f) 
+# Nice
 names(xmin) <- date
 names(xmax) <- date
 names(xmax)
@@ -32,7 +37,9 @@ temperatures <- data.frame(xmin,xmax)
 temperatures
 
 # h)
-temperatures <- within(temperatures, {xminFahrenheit <- (xmin*9/5+32) })
+temperatures <- within(temperatures, {
+	xminFahrenheit <- xmin * 9 / 5 + 32 
+})
 temperatures
 
 # i)
@@ -42,6 +49,8 @@ Fahrenheit <- data.frame(xminFahrenheit, xmaxFahrenheit)
 Fahrenheit
 
 # j)
+## Nice
+
 j1Fahrenheit <- Fahrenheit[c(1:5),] # including the first five days
 j1Fahrenheit
 j2Fahrenheit <- Fahrenheit[-c(6:7),] # ii) excluding the last two days

@@ -10,6 +10,7 @@ y
 # c)
 x - y
 # result of the difference between x and y is 3 -3 0 0 
+# True. The question was why this is so...
 
 # d)
 s <- c(x, y)
